@@ -1,11 +1,9 @@
-vim 4-puts.c
-
 #include <stdio.h>
 
 /**
- *main - Printing
+ * main - prints a test
  *
- *Return: Always 0 (Successful)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
