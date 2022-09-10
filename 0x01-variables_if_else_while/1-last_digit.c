@@ -1,22 +1,23 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 /**
  * main - Entry point
  *
- * Return: Always 0 (Seccess/correct)
+ * Return: Always 0 (success)
  */
 int main(void)
-
 {
-char alphabet;
+	int n;
 
-for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+	srand(time(0);
+			n = rand() - RAND_MAX / 2;
 
-{
-	putchar(alphabet);
-}
-
-putchar('\n');
-
-return (0);
-
-}
+			if ((n % 10) == 0)
+			printf("Last digit of %d is %d and is greater than 5\n", n, n % 10;
+				else if ((n % 10) > 5) 
+				printf("Last digit of %d and is greater than 5\n", n, n % 10); 
+				else
+				printf("Last digit of %d is %d and is less 6 and not 0\n", n, n % 10);
+				return (0);
+				} 
