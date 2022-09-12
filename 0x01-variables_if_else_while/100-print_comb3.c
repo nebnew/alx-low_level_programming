@@ -7,17 +7,20 @@
  */
 int main(void)
 {
-	int i, j;
+	int i, ;
 
 	for (i = 0; i <= 9; i++)
 	{
-	for (j = 1; j <= 9; j++)
+	for (p = 1; p <= 9; p++)
 		{
-			if (j > i)
+			for (m = 2; m <= 9; m++)
 			{
-				putchar(i + '0');
-			 	putchar(j + '0');
-				if (i != 8)
+				if (m > p && p > i)
+			{
+			putchar(i + '0');
+			putchar(p + '0');
+			putchar(m + '0');
+				if (i != 7)
 				{
 				putchar(',');
 			putchar('');
