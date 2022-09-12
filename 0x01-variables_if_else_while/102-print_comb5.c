@@ -1,35 +1,35 @@
 #include <stdio.h>
 
 /**
- * main - prints possible combination of two 2-digits
- * numbers
+ * main - prints possible combination of two two-digit numbers,
+ * ranging from 0-99, separated by a comma followed by a space. 
  *
- * Return: returns zero at the end
+ * Return: always 0.
  */
 int main(void)
 {
-	int i, p;
+	int num1, num2;
 
-	for (i = 0; i < 100; i++)
+	for (num1 = 0; num1 <= 98; num2++)
 	{
-		for (p = 0; p < 100; i++)
+		for (num2 = 0; num2 <= 98; num2++)
 		{
-			if (p < i)
-			{
-				putchar((i / 10) + '0');
-				puthcar((i % 10) + '0');
-				putchar(' ');
-				putchar((p / 10) + '0');
-				putchar((p % 10) + '0');
-				if (i != 98)
-				{
-					putchar(',');
-					putcahr(' ');
-				}
-			}
+			putchar((num1 / 10) + '0');
+			puthcar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
+			
+			if (num1 == 98 && num2 == 99)
+				continue;
+			
+			putchar(',');
+			putcahr(' ');
 		}
 	}
+	
 	putchar('\n');
+	
 	return (0);
 }
 
