@@ -1,33 +1,32 @@
 #include <stdio.h>
 
 /**
- * main - print single digit numbers statring for 0
+ * main - print combination of numbers
  *
- * Return: returns zero at the end
+ * Return: Always (success)
  */
 int main(void)
 {
-	int i, ;
+	int c, i;
 
-	for (i = 0; i <= 9; i++)
+	for (c = '0'; c <= '9'; c++)
 	{
-	for (p = 1; p <= 9; p++)
+		for (i = '0'; i <= '9'; i++)
 		{
-			for (m = 2; m <= 9; m++)
+			if (c < i)
 			{
-				if (m > p && p > i)
-			{
-			putchar(i + '0');
-			putchar(p + '0');
-			putchar(m + '0');
-				if (i != 7)
+				putchar(c);
+				putchar(i);
+				
+				if (c !='8' ||(c == '8' && i != '9'))
 				{
-				putchar(',');
-			putchar('');
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
 	}
-putchar('\n');
-return (0);
+	putchar('\n');
+	
+	return (0);
 }
