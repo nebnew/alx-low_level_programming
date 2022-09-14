@@ -3,20 +3,21 @@
 /**
  * print_alphabet_x10: - make alphabet x10 times
  *
- * Return: - void
+ * Return: - 0
  */
 void pritn_alphabet_x10(void)
 {
-char c;
-int i = 0;
+int b = 0;
 
-while (i <= 9)
+while (b < 10)
 {
-for (c = 'a'; c <= 'z'; c++)
+char a =  'a';
+while (a <= 'z')
 {
-_putchar(c);
+_putchar(a);
+a++;
 }
 _putchar('\n');
-i++;
+b++;
 }
 }
