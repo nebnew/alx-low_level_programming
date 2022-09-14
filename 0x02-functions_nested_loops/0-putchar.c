@@ -1,17 +1,22 @@
-#include <stdio.h>
-#include <sdlib.h>
-#include <time.h>
+#include "main.h"
 
 /**
- * main - Entry points
  *
- * Return: always 0 success
- */
+ *  * main - prints _putchar, fllowd by a new linees
+ *
+ *   * Return: Alwys 0 (Success)
+ *
+ *    */
 
 int main(void)
-{
-printf("_putchar\n");
 
-return (0);
+{
+	char abe[] = "_putchar";
+	int c;
+	
+	for (c = 0; c < 8; c++)
+	_putchar(abe[c]);
+	_putchar('\n');
+	return (0);
 
 }
