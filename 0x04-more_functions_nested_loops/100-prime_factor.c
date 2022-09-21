@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main -  calculate largest prime of 612852475143
@@ -13,9 +14,7 @@ int main(void)
 	for (py = 2; py < x; py++)
 	{
 		if (x % py == 0
-				{
 				x = x / py;
-				}
 				}
 				printf("%ld\n", py);
 				return (0);
