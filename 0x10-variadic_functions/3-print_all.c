@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 	va_list list;
 	unsigned int j = 0, start = 0;
 	char *p;
-	
+
 	va_start(list, format);
 	while (format && format[j] != '\0')
 	{
@@ -42,7 +42,8 @@ void print_all(const char * const format, ...)
 			if (p)
 			{ printf("%s", p);
 				break; }
-			printf("%p", p);						break; }
+			printf("%p", p);
+			break; }
 		j++;
 	}
 	printf("\n");
