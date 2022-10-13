@@ -1,26 +1,25 @@
-#ifndef _HEADER_
-#define _HEADER_
+#include <stdio.h>
 #include <stdarg.h>
 
-int _putchar(char c);
-int sum_them_all(const unsigned int n, ...);
-void print_numbers(const char *separator, const unsigned int n, ...);
-void print_strings(const char *separator, const unsigned int n, ...);
-void print_all(const char * const format, ...);
-void print_a_char(char *separator, va_list args);
-void print_a_integer(char *separator, va_list args);
-void print_a_float(char *separator, va_list args);
-void print_a_char_ptr(char *separator, va_list args);
-
 /**
- * struct format_types - Struct format_types
- * @identifier: The conversion specifier
- * @f: The function pointer
+ * sum_them_all - sum of all its parameters
+ * @n: n args
+ * Return: sum or if n == 0, return 0
  */
-typedef struct format_types
+int sum_them_all(const unsigned int n, ...)
 {
-	char *identifier;
-	void (*f)(char *separator, va_list args);
-} f_dt;
+	int sum = 0;
+	unsigned int i;
+	va_list arguments;
 
-#endif
+	if (n)
+	{
+		va_start(arguments, n);
+		for (i = 0; i < n; i++)
+		{
+			sum += va_arg(arguments, int);
+		}
+		va_end(arguments);
+	}
+	return (sum);
+}
